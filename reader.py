@@ -11,7 +11,7 @@ try:
 except:
     workbook = Workbook()
     worksheet = link
-    worksheet['A1'].value = 'date and time'
+    worksheet['A1'].value = link
     worksheet['A2'].value = 'date and time'
     worksheet['B2'].value = 'username'
     worksheet['C2'].value = 'message'
