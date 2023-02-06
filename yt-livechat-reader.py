@@ -15,13 +15,13 @@ try:
     worksheet = workbook.active
 except:
     workbook = Workbook()
+
     worksheet = workbook.active
     worksheet['A1'].value = original
     worksheet['A2'].value = 'Date and time'
     worksheet['B2'].value = 'Username'
     worksheet['C2'].value = 'Message'
     worksheet['D2'].value = 'Amount'
-    workbook.save(file_name)
 
 for cell in worksheet["A"]:
     if cell.value is None:
@@ -42,4 +42,5 @@ while chat.is_alive():
                 row = row+1
     except AttributeError:
         print("Error occurred. Restarting...")
+
         chat = pytchat.create(video_id=link.replace('https://www.youtube.com/watch?v=',''))
